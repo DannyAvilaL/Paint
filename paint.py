@@ -35,14 +35,14 @@ def square(start, end):
 
 def draw_circle(start, end):
     #Dibuja un circulo obteniendo el punto de inicio y el final del mismo utilizándolos como diametro
-    radio = (end.x - start.x)/2     
-    up()        
-    goto(start.x, start.y)      
-    down()      
-    setheading(270)     
-    begin_fill()        
-    circle(radio)       
-    end_fill()      
+    radio = (end.x - start.x)/2     #Se obtiene la distancia entre el principio y el final del circulo y se divide entre 2 para obtener su radio
+    up()        #Levanta la pluma de forma que aún no dibuja
+    goto(start.x, start.y)      #se dan las coordenas iniciales del circulo
+    down()      #baja la pluma para comenzar a dibujar
+    setheading(270)     #se coloca a la pluma mirando hacia abajo con el fin de que el circulo se llene en medio de los puntos que ingreso el usuario
+    begin_fill()        #Se llama a esta función antes de hacer una figura para que la misma se llene
+    circle(radio)       #se llama a esta función con el radio del círculo, lo que permitirá que se dibuje
+    end_fill()      #Se termina el llenado de la figura
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
