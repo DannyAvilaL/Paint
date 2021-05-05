@@ -22,16 +22,16 @@ def line(start, end):
 
 def square(start, end):
     #Define el comportamiento de el cuadrado
-    up()        
-    goto(start.x, start.y)      
-    down()      
-    begin_fill()                
+    up()        #Levanta la pluma de forma que aún no dibuja
+    goto(start.x, start.y)      #se dan las coordenas iniciales de la primera esquina del cuadrado
+    down()      #baja la pluma para comenzar a dibujar
+    begin_fill()        #Se llama a esta función antes de hacer una figura para que la misma se llene        
 
-    for count in range(4):        
-        forward(end.x - start.x)       
-        left(90)        
+    for count in range(4):      #se realiza un for que trazara las cuatro líneas del cuadrado     
+        forward(end.x - start.x)        #se avanza la distancia que hay entre el punto de inicio y el punto del final
+        left(90)        #se gira 90 grados cada vez que se entra al for, con el fin de que las 4 lineas formen un cuadrado
 
-    end_fill()    
+    end_fill()      #Se termina el llenado de la figura 
 
 def circle(start, end):
     #Dibuja un circulo obteniendo el punto de inicio y el final del mismo utilizándolos como diametro
