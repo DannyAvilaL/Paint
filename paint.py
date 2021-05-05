@@ -9,32 +9,32 @@ Exercises
 5. Add width parameter.
 
 """
-
+#Importa las librerías a utilizar
 from turtle import *
 from freegames import vector
 
 def line(start, end):
-    "Draw line from start to end."
-    up()
-    goto(start.x, start.y)
-    down()
-    goto(end.x, end.y)
+    #Define el funcionamiento de la línea 
+    up()        
+    goto(start.x, start.y)      
+    down()      
+    goto(end.x, end.y)      
 
 def square(start, end):
-    "Draw square from start to end."
-    up()
-    goto(start.x, start.y)
-    down()
-    begin_fill()
+    #Define el comportamiento de el cuadrado
+    up()        
+    goto(start.x, start.y)      
+    down()      
+    begin_fill()                
 
-    for count in range(4):
-        forward(end.x - start.x)
-        left(90)
+    for count in range(4):        
+        forward(end.x - start.x)       
+        left(90)        
 
-    end_fill()
+    end_fill()    
 
 def circle(start, end):
-    "Draw circle from start to end."
+    #Dibuja un circulo obteniendo el punto de inicio y el final del mismo utilizándolos como diametro
     pass  # TODO
 
 def rectangle(start, end):
@@ -71,6 +71,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
