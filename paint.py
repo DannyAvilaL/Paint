@@ -15,10 +15,10 @@ from freegames import vector
 
 def line(start, end):
     #Define el funcionamiento de la línea 
-    up()        
-    goto(start.x, start.y)      
-    down()      
-    goto(end.x, end.y)      
+    up()        #Levanta la pluma de forma que aún no dibuja
+    goto(start.x, start.y)      #se dan las coordenas iiciales de la línea
+    down()      #baja la pluma para comenzar a dibujar
+    goto(end.x, end.y)      #Lleva la pluma a las segundas coordenadas dibujando la línea      
 
 def square(start, end):
     #Define el comportamiento de el cuadrado
