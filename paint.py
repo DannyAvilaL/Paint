@@ -33,9 +33,16 @@ def square(start, end):
 
     end_fill()      #Se termina el llenado de la figura 
 
-def circle(start, end):
+def draw_circle(start, end):
     #Dibuja un circulo obteniendo el punto de inicio y el final del mismo utilizándolos como diametro
-    pass  # TODO
+    radio = (end.x - start.x)/2     
+    up()        
+    goto(start.x, start.y)      
+    down()      
+    setheading(270)     
+    begin_fill()        
+    circle(radio)       
+    end_fill()      
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
