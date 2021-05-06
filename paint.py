@@ -12,6 +12,7 @@ Exercises
 #Importa las librerías a utilizar
 from turtle import *
 from freegames import vector
+from math import tan, hypot
 
 def line(start, end):
     #Define el funcionamiento de la línea 
@@ -35,11 +36,12 @@ def square(start, end):
 
 def draw_circle(start, end):
     #Dibuja un circulo obteniendo el punto de inicio y el final del mismo utilizándolos como diametro
-    radio = (end.x - start.x)/2     #Se obtiene la distancia entre el principio y el final del circulo y se divide entre 2 para obtener su radio
+    lado = round(hypot(end.x - start.x, end.y - start.y))
+    radio = lado/2     #Se obtiene la distancia entre el principio y el final del circulo y se divide entre 2 para obtener su radio
     up()        #Levanta la pluma de forma que aún no dibuja
     goto(start.x, start.y)      #se dan las coordenas iniciales del circulo
     down()      #baja la pluma para comenzar a dibujar
-    setheading(270)     #se coloca a la pluma mirando hacia abajo con el fin de que el circulo se llene en medio de los puntos que ingreso el usuario
+    seth(towards(end.x, end.y)-90)     #apunta en la dirección del segundo punto, restando 90° para coincidir con los puntos
     begin_fill()        #Se llama a esta función antes de hacer una figura para que la misma se llene
     circle(radio)       #se llama a esta función con el radio del círculo, lo que permitirá que se dibuje
     end_fill()      #Se termina el llenado de la figura
