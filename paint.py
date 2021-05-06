@@ -1,3 +1,7 @@
+#Autores
+# Daniela Avila Luna    A01378664
+# Liam Garay Monroy     A01750632
+
 """Paint, for drawing shapes.
 
 Exercises
@@ -52,7 +56,7 @@ def rectangle(start, end):
     goto(start.x, start.y)      #Va a las coordenadas de inicio
     down()      #Baja la pluma
     begin_fill()        #Comienza a colorear
-    
+    seth(0)     # Apunta hacia la derecha para poder trazar correctamente el rectángulo
     for lado in range(2):       #Trazará medio rectángulo por iteración
         forward(end.x - start.x)    
         left(90)
