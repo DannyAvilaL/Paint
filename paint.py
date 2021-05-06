@@ -104,6 +104,7 @@ onkey(lambda: color('white'), 'W')      # Cambia al color blanco con W
 onkey(lambda: color('green'), 'G')      # Cambia al color verde con G
 onkey(lambda: color('blue'), 'B')       # Cambia al color azul con B
 onkey(lambda: color('red'), 'R')        # Cambia al color rojo con R
+onkey(lambda: color('yellow'), 'Y')        # Cambia al color amarillo con Y
 onkey(lambda: store('shape', line), 'l')        # Pinta una línea recta con l
 onkey(lambda: store('shape', square), 's')      # Pinta un cuadrado con s
 onkey(lambda: store('shape', draw_circle), 'c')      # Pinta un círculo con c
