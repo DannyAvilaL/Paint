@@ -106,7 +106,7 @@ onkey(lambda: color('blue'), 'B')       # Cambia al color azul con B
 onkey(lambda: color('red'), 'R')        # Cambia al color rojo con R
 onkey(lambda: store('shape', line), 'l')        # Pinta una línea recta con l
 onkey(lambda: store('shape', square), 's')      # Pinta un cuadrado con s
-onkey(lambda: store('shape', circle), 'c')      # Pinta un círculo con c
+onkey(lambda: store('shape', draw_circle), 'c')      # Pinta un círculo con c
 onkey(lambda: store('shape', rectangle), 'r')   # Pinta un rectángulo con r
 onkey(lambda: store('shape', triangle), 't')    # Pinta un triángulo con t
 done()
