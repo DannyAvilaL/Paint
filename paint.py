@@ -12,21 +12,17 @@ Exercises
 #Importa las librerías a utilizar
 from turtle import *
 from freegames import vector
-<<<<<<< HEAD
-from math import tan, hypot, sin, sqrt
-=======
 from math import tan, hypot
->>>>>>> A01750632
 
 def line(start, end):
-    #Define el funcionamiento de la línea 
+    "Define el funcionamiento de la línea"
     up()        #Levanta la pluma de forma que aún no dibuja
     goto(start.x, start.y)      #se dan las coordenas iiciales de la línea
     down()      #baja la pluma para comenzar a dibujar
     goto(end.x, end.y)      #Lleva la pluma a las segundas coordenadas dibujando la línea      
 
 def square(start, end):
-    #Define el comportamiento de el cuadrado
+    "Define el comportamiento de el cuadrado"
     up()        #Levanta la pluma de forma que aún no dibuja
     goto(start.x, start.y)      #se dan las coordenas iniciales de la primera esquina del cuadrado
     down()      #baja la pluma para comenzar a dibujar
@@ -39,7 +35,7 @@ def square(start, end):
     end_fill()      #Se termina el llenado de la figura 
 
 def draw_circle(start, end):
-    #Dibuja un circulo obteniendo el punto de inicio y el final del mismo utilizándolos como diametro
+    "Dibuja un circulo obteniendo el punto de inicio y el final del mismo utilizándolos como diametro"
     lado = round(hypot(end.x - start.x, end.y - start.y))
     radio = lado/2     #Se obtiene la distancia entre el principio y el final del circulo y se divide entre 2 para obtener su radio
     up()        #Levanta la pluma de forma que aún no dibuja
@@ -98,7 +94,6 @@ def store(key, value):
     """
     state[key] = value
 
-<<<<<<< HEAD
 state = {'start': None, 'shape': line}      # Al momento de inciar el programa, guardará el primer punto y el trazo por default es una línea
 setup(420, 420, 370, 0)     # Dimensiones de la ventana
 onscreenclick(tap)      # Con cada click, llamará a la función de tap
@@ -114,22 +109,4 @@ onkey(lambda: store('shape', square), 's')      # Pinta un cuadrado con s
 onkey(lambda: store('shape', circle), 'c')      # Pinta un círculo con c
 onkey(lambda: store('shape', rectangle), 'r')   # Pinta un rectángulo con r
 onkey(lambda: store('shape', triangle), 't')    # Pinta un triángulo con t
-=======
-state = {'start': None, 'shape': line}
-setup(420, 420, 370, 0)
-onscreenclick(tap)
-listen()
-onkey(undo, 'u')
-onkey(lambda: color('black'), 'K')
-onkey(lambda: color('white'), 'W')
-onkey(lambda: color('green'), 'G')
-onkey(lambda: color('blue'), 'B')
-onkey(lambda: color('red'), 'R')
-onkey(lambda: color('yellow'), 'Y')
-onkey(lambda: store('shape', line), 'l')
-onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', draw_circle), 'c')
-onkey(lambda: store('shape', rectangle), 'r')
-onkey(lambda: store('shape', triangle), 't')
->>>>>>> A01750632
 done()
