@@ -10,12 +10,10 @@ Iniciamos con el código base de Paint que incluia:
 * Color azul
 * Color rojo
 
-Agregamos:  
-* Daniela Avila Luna: Dibujar Tiangulo y Rectángulo  
-* Liam Garay Monroy: Dibujar Circulo y color amarillo  
+## Agregamos:  
+### Daniela Avila Luna: Dibujar Tiangulo y Rectángulo 
 
-
-## Códigos
+#### Códigos
 * Dibujar Rectángulo
 
 ```python
@@ -49,7 +47,6 @@ def triangle(start, end):
     # Mide la longitud del lado con la hipotenusa de un triángulo rectángulo
     lado = round(hypot(end.x - start.x, end.y - start.y))
     seth(towards(end.x, end.y))  # Apunta en la dirección del segundo punto
-
     for lados in range(3):  # Realiza un triángulo equilátero al girar 120
         forward(lado)
         left(120)
@@ -57,6 +54,8 @@ def triangle(start, end):
     end_fill()  # Termina de colorear
 ```
 
+### Liam Garay Monroy: Dibujar Circulo y color amarillo 
+ 
 * Dibujar Circulo
 ```python
 def draw_circle(start, end):
